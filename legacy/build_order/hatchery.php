@@ -75,9 +75,9 @@ class Hatchery {
 	 * @var array
 	 */
 	public $vomitExpires = array();
-	
+
 	public $race;
-	
+
 	/// private members
 
 	/**
@@ -100,7 +100,6 @@ class Hatchery {
 	 * @param int $initialLarvae
 	 */
 	public function __construct($created, $initialLarvae = 1, $tag = null) {
-		$this->race = $race;
 		$this->created = $created;
 		$this->initialLarvae = $initialLarvae;
 		$this->tag = $tag;
@@ -194,7 +193,7 @@ class Hatchery {
 
 		if(Hatcheries::$debug) tracemsg("Hatchery::update(), nextGenerated=". simple_time($this->nextGenerated()) .", nextVomit=". simple_time($this->nextVomit()));
 		while($this->nextGenerated() <= $time || $this->nextVomit() <= $time) {
-			
+
 			// expire vomits
 			foreach($this->vomitExpires as $key => $vomitExpire) {
 				if($vomitExpire <= min($time, $this->nextGenerated())) {
@@ -283,7 +282,7 @@ class Hatcheries {
 	private $_lastUpdated;
 
 	/// constructor
-	
+
 	/**
 	 * Create a copy of this.
 	 */
@@ -419,7 +418,7 @@ class Hatcheries {
 			throw_error("Cannot generate larvae in the past.",
 				"This error message should not occur. Please report this message with your build order on the thread linked at bottom of the page.");
 		}
-		
+
 		// generate larvae
 		foreach($this->_hatcheries as $hatchery) {
 			$hatchery->update($time, self::$debug);

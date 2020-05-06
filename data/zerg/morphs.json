@@ -1,0 +1,122 @@
+{
+    "MorphToLair": {
+        "name": "Lair",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "SpawningPool"
+        ],
+        "expends": [
+            "Hatchery"
+        ],
+        "yields": [
+            "Lair"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 100,
+            "time": 80
+        }
+    },
+    "MorphToHive": {
+        "name": "Hive",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "InfestationPit"
+        ],
+        "expends": [
+            "Lair"
+        ],
+        "yields": [
+            "Hive"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 150,
+            "time": 100
+        }
+    },
+    "MorphToGreaterSpire": {
+        "name": "Greater Spire",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "Spire"
+        ],
+        "yields": [
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 150,
+            "time": 100
+        }
+    },
+    "MorphToBaneling": {
+        "name": "Baneling",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BanelingNest"
+        ],
+        "expends": [
+            "Zergling"
+        ],
+        "yields": [
+            "Baneling"
+        ],
+        "cost": {
+            "minerals": 25,
+            "gas": 25,
+            "time": 20
+        }
+    },
+    "MorphToOverseer": {
+        "name": "Overseer",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "Overlord"
+        ],
+        "yields": [
+            "Overseer"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 25,
+            "time": 20
+        }
+    },
+    "MorphToBroodLord": {
+        "name": "Brood Lord",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "GreaterSpire"
+        ],
+        "expends": [
+            "Mutalisk"
+        ],
+        "yields": [
+            "BroodLord"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 34
+        }
+    }
+}

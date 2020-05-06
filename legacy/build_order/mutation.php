@@ -52,7 +52,7 @@ class Mutation {
 	 * @var float
 	 */
 	public $time;
-	
+
 	/// protected members
 
 	/**
@@ -78,7 +78,7 @@ class Mutation {
 	 * @var array
 	 */
 	protected $_mineralPositiveChange;
-	
+
 	/// constructor
 
 	/**
@@ -90,7 +90,7 @@ class Mutation {
 		$this->mineralChange = $mineralChange;
 		$this->gasChange = $gasChange;
 	}
-	
+
 	/// operators
 
 	/**
@@ -195,28 +195,34 @@ class Mutation {
 	 * @param IncomeSlot $slot
 	 */
 	public function distribute($slot) {
-		
+
 		// don't distribute twice
 		if(isset($this->_gasNegativeChange) || isset($this->_mineralNegativeChange)) {
 			return;
 		}
-		
+
+        $this->_gasNegativeChange = array();
+        $this->_gasPositiveChange = array();
+
+        $this->_mineralNegativeChange = array();
+        $this->_mineralPositiveChange = array();
+
 		// auto-distribute miners on gas
 		if(!empty($this->gasChange)) {
-			
+
 			// single geyser
 			if(count($slot->gasMiners) == 0) {
 				throw_error("You don't have any geysers!",
 					"Workers can only be transferred to an Assimilator after the Assimilator has been completed. You can set this up by writing <em>13 Assimilator &gt; put 3 on gas</em>.");
-				
+
 			// single geyser
 			} elseif(count($slot->gasMiners) == 1) {
 				$gasChange = array($this->gasChange);
-				
+
 			// multiple geysers
 			} else {
 				$gasChange = array_fill(0, count($slot->gasMiners), 0);
-				
+
 				// take miners off gas
 				if($this->gasChange < 0) {
 					$left = -$this->gasChange;
@@ -229,7 +235,7 @@ class Mutation {
 						}
 						$gasChange[$mostSaturated]--;
 					} while(--$left > 0);
-				
+
 				// put miners on gas
 				} else {
 					$left = $this->gasChange;
@@ -244,27 +250,25 @@ class Mutation {
 					} while(--$left > 0);
 				}
 			}
-			
+
 			// store changes
-			$this->_gasNegativeChange = array();
-			$this->_gasPositiveChange = array();
 			for($i = 0; $i < count($gasChange); $i++) {
 				$this->_gasNegativeChange[] = $gasChange[$i] < 0 ? $gasChange[$i] : 0;
 				$this->_gasPositiveChange[] = $gasChange[$i] > 0 ? $gasChange[$i] : 0;
 			}
 		}
-		
+
 		// auto-distribute miners on minerals
 		if(!empty($this->mineralChange)) {
-			
+
 			// single base
 			if(count($slot->mineralMiners) == 1) {
 				$mineralChange = array($this->mineralChange);
-				
+
 			// multiple bases
 			} else {
 				$mineralChange = array_fill(0, count($slot->mineralMiners), 0);
-				
+
 				// take miners off minerals
 				if($this->mineralChange < 0) {
 					$left = -$this->mineralChange;
@@ -277,7 +281,7 @@ class Mutation {
 						}
 						$mineralChange[$mostSaturated]--;
 					} while(--$left > 0);
-				
+
 				// put miners on minerals
 				} else {
 					$left = $this->mineralChange;
@@ -294,10 +298,8 @@ class Mutation {
 					} while(--$left > 0);
 				}
 			}
-			
+
 			// store changes
-			$this->_mineralNegativeChange = array();
-			$this->_mineralPositiveChange = array();
 			for($i = 0; $i < count($mineralChange); $i++) {
 				$this->_mineralNegativeChange[] = $mineralChange[$i] < 0 ? $mineralChange[$i] : 0;
 				$this->_mineralPositiveChange[] = $mineralChange[$i] > 0 ? $mineralChange[$i] : 0;
@@ -480,7 +482,7 @@ class TransferMutation extends Mutation {
 	 * @return string
 	 */
 	public function __tostring() {
-		return 
+		return
 			(empty($this->mineralChange) ? "" : ("Transfer ". $this->mineralChange . " workers to new base")).
 			(empty($this->gasChange) ? "" : ("Transfer ". $this->gasChange . " workers to new geyser"));
 	}
@@ -494,22 +496,22 @@ class TransferMutation extends Mutation {
 	 * @param IncomeSlot $slot
 	 */
 	public function distribute($slot) {
-		
+
 		if(isset($this->_gasNegativeChange) || isset($this->_mineralNegativeChange)) {
 			return;
 		}
-		
+
 		if(!empty($this->mineralChange)) {
-			
+
 			// single base
 			if(count($slot->mineralMiners) == 1) {
 				throw_error("Cannot transfer workers if you have only one base.",
 					"This error message should not occur. Please report this message with your build order on the thread linked at bottom of the page.");
-				
+
 			// multiple bases
 			} else {
 				$mineralChange = array_fill(0, count($slot->mineralMiners), 0);
-				
+
 				// take miners off minerals
 				$left = $this->mineralChange;
 				do {
@@ -521,11 +523,11 @@ class TransferMutation extends Mutation {
 					}
 					$mineralChange[$mostSaturated]--;
 				} while(--$left > 0);
-				
+
 				// put miners on minerals at new base
 				$mineralChange[count($mineralChange) - 1] += $this->mineralChange;
 			}
-			
+
 			// store changes
 			$this->_mineralNegativeChange = array();
 			$this->_mineralPositiveChange = array();
@@ -534,19 +536,19 @@ class TransferMutation extends Mutation {
 				$this->_mineralPositiveChange[] = $mineralChange[$i] > 0 ? $mineralChange[$i] : 0;
 			}
 		}
-		
+
 		// transfer N miners to new geyser from other geysers
 		if(!empty($this->gasChange)) {
-			
+
 			// single geyser
 			if(count($slot->gasMiners) == 1) {
 				throw_error("Cannot transfer workers if you have only one geyser.",
 					"This error message should not occur. Please report this message with your build order on the thread linked at bottom of the page.");
-				
+
 			// multiple geysers
 			} else {
 				$gasChange = array_fill(0, count($slot->gasMiners), 0);
-				
+
 				// take miners off gas
 				$left = $this->gasChange;
 				do {
@@ -558,11 +560,11 @@ class TransferMutation extends Mutation {
 					}
 					$gasChange[$mostSaturated]--;
 				} while(--$left > 0);
-				
+
 				// put miners on gas at new geyser
 				$gasChange[count($gasChange) - 1] += $this->gasChange;
 			}
-			
+
 			// store changes
 			$this->_gasNegativeChange = array();
 			$this->_gasPositiveChange = array();
@@ -663,7 +665,7 @@ class Mutations implements Iterator, Countable {
 	private $_position;
 
 	/// public methods
-	
+
 	/**
 	 * Add a mutation to the list.
 	 * @param Mutation $mutation
@@ -685,7 +687,7 @@ class Mutations implements Iterator, Countable {
 	public function count() {
 		return count($this->_mutations);
 	}
-	
+
 	/// Iterator implementation
     function current() {
         return $this->_mutations[$this->_position];

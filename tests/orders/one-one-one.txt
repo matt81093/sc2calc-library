@@ -1,0 +1,12 @@
+10 Supply Depot
+12 Barracks
+13 Refinery, then put 3 SCVs on gas (2 seconds)
+15 Orbital Command, then constant Calldown: MULE
+15 Refinery, then put 3 SCVs on gas (2 seconds)
+15 Marine
+16 Supply Depot and Marine [2]
+19 Factory
+20 Reactor on Barracks
+21 Starport
+22 Tech Lab on Factory
+23 Swap Tech Lab on Factory to Starport

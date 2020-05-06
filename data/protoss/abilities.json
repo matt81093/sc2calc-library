@@ -1,0 +1,14 @@
+{
+    "ChronoBoost": {
+        "name": "Chrono Boost",
+        "type": [
+            "Ability"
+        ],
+        "spellCaster": "Nexus",
+        "spellCooldown": 20,
+        "exposed": false,
+        "cost": {
+            "energy": 25
+        }
+    }
+}

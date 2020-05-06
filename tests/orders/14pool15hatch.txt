@@ -1,0 +1,6 @@
+9 Overlord
+14 Spawning Pool (send @175 minerals)
+15 Hatchery, then transfer 8 drones (10 seconds lost)
+16 Extractor, then transfer 3 drones (2 seconds lost)
+16 Queen, then Spawn Larvae
+18 Overlord

@@ -1,0 +1,6 @@
+10 Supply Depot
+12 Barracks
+14 Refinery, then put 3 SCVs on gas (2 seconds)
+16 Orbital Command, then constant Calldown: MULE
+17 Barracks, then Tech Lab on Barracks, then Stimpack
+18 Barracks, then Reactor on Barracks

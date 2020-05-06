@@ -1,0 +1,43 @@
+{
+	"name": "holonet/sc2calc",
+	"description": "SC2 build calculator library based on sc2calc.org",
+	"type": "library",
+	"authors": [
+		{
+			"name": "Jasper Abraham Visser"
+		},
+		{
+			"name": "Matthias Lantsch",
+			"email": "matthias.lantsch@bluewin.ch"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"holonet\\sc2calc\\": "src"
+		}
+	},
+	"require": {
+		"php": ">=7.3",
+		"ext-json": "*",
+		"myclabs/php-enum": "^1.7",
+		"jc21/clitable": "^1.2",
+		"symfony/stopwatch": "^5.0"
+	},
+	"require-dev": {
+		"friendsofphp/php-cs-fixer": "^2.11",
+		"vimeo/psalm": "^3.5",
+		"symfony/var-dumper": "^5.0",
+		"phpunit/phpunit": "^8.4.1"
+	},
+	"scripts": {
+		"fix": [
+			"@php -d memory_limit=-1 vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --ansi"
+		],
+		"test": [
+			"@composer validate",
+			"@php -d memory_limit=-1 vendor/phpunit/phpunit/phpunit",
+			"@php -d memory_limit=-1 vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --dry-run --ansi",
+			"@php -d memory_limit=-1 vendor/vimeo/psalm/psalm"
+		]
+	}
+}

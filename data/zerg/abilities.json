@@ -1,0 +1,24 @@
+{
+    "SpawnLarvae": {
+        "name": "Spawn Larvae",
+        "type": [
+            "Ability"
+        ],
+        "spellCaster": "Queen",
+        "spellCooldown": 40,
+        "cost": {
+            "energy": 25
+        }
+    },
+    "CreepTumor": {
+        "name": "Creep Tumor",
+        "type": [
+            "Ability"
+        ],
+        "spellCaster": "Queen",
+        "spellCooldown": 15,
+        "cost": {
+            "energy": 25
+        }
+    }
+}

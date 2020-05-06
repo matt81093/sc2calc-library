@@ -104,7 +104,7 @@ class Availability {
 		switch($this->status) {
 			case Availability::Available:
 				return "";
-				
+
 			case Availability::InsufficientSupply:
 				return "There is ". ($this->supplyCount > $this->supplyNeeded ? "too much" : "insufficient") ." supply.";
 
@@ -155,7 +155,7 @@ class Availability {
 		switch($this->status) {
 			case Availability::Available:
 				return "";
-				
+
 			case Availability::InsufficientSupply:
 				return "The trigger supply count for this job is ". $this->supplyNeeded .", but at this point in the build order the achieved supply count is ". ($this->supplyCount > $this->supplyNeeded ? "already" : "only") ." ". $this->supplyCount .".";
 
@@ -259,7 +259,7 @@ class Dependency {
 	 * of the previous job.
 	 */
 	public $type;
-	
+
 	/// constructor
 
 	/**
@@ -295,7 +295,7 @@ abstract class Job {
 
 	/**
 	 * Previous job which must be scheduled before this one
-	 * @var Dependency 
+	 * @var Dependency
 	 */
 	public $dependency;
 
@@ -388,7 +388,7 @@ abstract class Job {
 	 * @var int
 	 */
 	public $triggerSupply;
-	
+
 	/// operators
 
 	/**
@@ -403,7 +403,7 @@ abstract class Job {
 			$this->description() .
 			($this->recurring ? " [auto]" : "");
 	}
-	
+
 	/// public methods
 
 	/**
@@ -687,7 +687,7 @@ class BuildJob extends Job {
 
 	public function mutations() {
 		$mutations = parent::mutations();
-		
+
 		// occupy worker
 		if($this->_product->type & Structure) {
 
@@ -696,7 +696,7 @@ class BuildJob extends Job {
 			$travelTime = $this->timeStarted - $this->timeInitiated;
 
 			// when does worker return
-			switch($this->_product->race & (Protoss | Terran | Zerg)) {
+			switch($this->_product->type & (Protoss | Terran | Zerg)) {
 				case Protoss:
 					$workerReturns = $this->timeStarted + $travelTime;
 					break;
@@ -705,9 +705,6 @@ class BuildJob extends Job {
 					break;
 				case Zerg:
 					$workerReturns = INF;
-					break;
-				case Stukov:
-					$workerReturns = $this->timeCompleted + $travelTime;
 					break;
 			}
 
@@ -861,7 +858,7 @@ class MutateJob extends Job {
 		$mutations->add($this->_mutation, $this->timeStarted);
 		return $mutations;
 	}
-	
+
 	public function when($income) {
 		return $this->_mutation->when($this->timeStarted, $income);
 	}
@@ -945,7 +942,7 @@ class TrickJob extends Job {
 		} else {
 			$result .= "Fake ". $this->_pledgeProduct;
 		}
-		if($this->_turnCount != 0 && 
+		if($this->_turnCount != 0 &&
 			($this->_turnCount != 1 || $this->_turnProduct->uid != $Drone->uid)) {
 			$result .= " into ". $this->_turnCount ." ". $this->_turnProduct ."s";
 		}
@@ -982,7 +979,7 @@ class TrickJob extends Job {
 	public function mineralRefund() {
 		return $this->_pledgeCount * floor(3 * $this->_pledgeProduct->mineralCost / 4);
 	}
-	
+
 	public function prerequisites() {
 		return array_merge($this->_pledgeProduct->prerequisites, $this->_turnProduct->prerequisites);
 	}

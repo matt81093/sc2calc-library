@@ -1,0 +1,17 @@
+9 Pylon
+10 Probe*
+12 Gateway
+12 Probe*
+14 Assimilator, then put 3 probes on gas (2 seconds)
+15 Probe*
+16 Pylon
+18 Cybernetics Core
+18 Assimilator, then put 3 probes on gas (2 seconds)
+18 Probe*
+21 Stalker
+23 Probe*
+24 Stargate
+24 Pylon
+25 Warpgate
+26 Stalker
+29 Void Ray**

@@ -1,0 +1,229 @@
+{
+    "Hatchery": {
+        "name": "Hatchery",
+        "type": [
+            "Structure",
+            "Base",
+            "Farm",
+            "StartBase"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 2,
+        "cost": {
+            "minerals": 300,
+            "gas": 0,
+            "time": 100
+        }
+    },
+    "Extractor": {
+        "name": "Extractor",
+        "type": [
+            "Structure",
+            "Geyser"
+        ],
+        "prerequisites": [],
+        "cost": {
+            "minerals": 25,
+            "gas": 0,
+            "time": 30
+        }
+    },
+    "SpawningPool": {
+        "name": "Spawning Pool",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Hatchery"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 0,
+            "time": 65
+        }
+    },
+    "EvolutionChamber": {
+        "name": "Evolution Chamber",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Hatchery"
+        ],
+        "cost": {
+            "minerals": 75,
+            "gas": 0,
+            "time": 35
+        }
+    },
+    "SpineCrawler": {
+        "name": "Spine Crawler",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "SpawningPool"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 0,
+            "time": 50
+        }
+    },
+    "SporeCrawler": {
+        "name": "Spore Crawler",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 75,
+            "gas": 0,
+            "time": 30
+        }
+    },
+    "RoachWarren": {
+        "name": "Roach Warren",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "SpawningPool"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 55
+        }
+    },
+    "BanelingNest": {
+        "name": "Baneling Nest",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "SpawningPool"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 50,
+            "time": 60
+        }
+    },
+    "Lair": {
+        "name": "Lair",
+        "type": [
+            "Structure",
+            "Base",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 2,
+        "cost": []
+    },
+    "HydraliskDen": {
+        "name": "Hydralisk Den",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 40
+        }
+    },
+    "InfestationPit": {
+        "name": "Infestation Pit",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 50
+        }
+    },
+    "Spire": {
+        "name": "Spire",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 100
+        }
+    },
+    "NydusNetwork": {
+        "name": "Nydus Network",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "cost": {
+            "minerals": 155,
+            "gas": 200,
+            "time": 50
+        }
+    },
+    "NydusWorm": {
+        "name": "Nydus Worm",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "NydusNetwork"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 20
+        }
+    },
+    "Hive": {
+        "name": "Hive",
+        "type": [
+            "Structure",
+            "Base",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 2,
+        "cost": []
+    },
+    "UltraliskCavern": {
+        "name": "Ultralisk Cavern",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 200,
+            "time": 65
+        }
+    },
+    "GreaterSpire": {
+        "name": "Greater Spire",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [],
+        "cost": []
+    }
+}

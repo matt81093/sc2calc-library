@@ -1,0 +1,42 @@
+{
+    "TransformToWarpgate": {
+        "name": "Transform to Warpgate",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "WarpgateUpgrade"
+        ],
+        "expends": [
+            "Gateway"
+        ],
+        "yields": [
+            "Warpgate"
+        ],
+        "cost": {
+            "minerals": 0,
+            "gas": 0,
+            "time": 10
+        }
+    },
+    "TransformToGateway": {
+        "name": "Transform to Gateway",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "WarpgateUpgrade"
+        ],
+        "expends": [
+            "Warpgate"
+        ],
+        "yields": [
+            "Gateway"
+        ],
+        "cost": {
+            "minerals": 0,
+            "gas": 0,
+            "time": 10
+        }
+    }
+}

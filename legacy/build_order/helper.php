@@ -1,15 +1,15 @@
 <?php
 
 class Helper {
-	
+
 	public function makeProduct($input) {
 		return json_decode($input);
 	}
-	
+
 	public function doesContain($haystack, $needle) {
 		return strpos($haystack, $needle) !== false;
 	}
-	
+
 	public function toType($type) {
 		$type = explode(" | ", $type);
 		$strings = count($type);
@@ -20,8 +20,8 @@ class Helper {
 		}
 		return $msg;
 	}
-	
-	public function toRace($input) {
+
+	public static function toRace($input) {
 		switch ($input) {
 			case $input === "Terran":
 				return Terran;
@@ -65,8 +65,8 @@ class Helper {
 				return Stetmann;
 		}
 	}
-	
-	public function sortToArray($input) {
+
+	public static function sortToArray($input) {
 		if($input == 0) {
 			return array();
 		}
@@ -80,8 +80,8 @@ class Helper {
 		return $msg;
 		//$Product::$all[$count][$name] === $json;
 	}
-		
-	public function processProductArray() {
+
+	public static function processProductArray() {
 		global $validTerran; //, $validZerg, $validProtoss;
 		global $validProducts;
 		$validProducts = $validTerran; //array_merge($validTerran, $validZerg, $validProtoss);
@@ -89,10 +89,10 @@ class Helper {
 			global ${$newProductname};
 			${$newProductname} = new Product(json_decode($newProduct));
 		}
-		
+
 		echo ("Completed Processing Product Array!" . "\n");
 	}
-		
+
 	public function isRace() {
 		return $this->race & (Protoss | Terran | Zerg);
 	}

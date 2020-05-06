@@ -1,0 +1,4 @@
+10 Pylon
+10 Gateway [2]
+12 Zealot* [3]
+18 Pylon

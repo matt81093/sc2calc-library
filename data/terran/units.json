@@ -1,0 +1,258 @@
+{
+    "ScoutingWorker": {
+        "name": "Scouting Worker",
+        "type": [],
+        "prerequisites": [],
+        "expends": [],
+        "cost": {
+            "supply": 1
+        }
+    },
+    "SCV": {
+        "name": "SCV",
+        "type": [
+            "Unit",
+            "Worker"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "CommandCenter",
+            "OrbitalCommand",
+            "PlanetaryFortress"
+        ],
+        "cost": {
+            "supply": 1,
+            "minerals": 50,
+            "gas": 0,
+            "time": 17
+        }
+    },
+    "Marine": {
+        "name": "Marine",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Barracks",
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "BarracksOnTechLab"
+        ],
+        "cost": {
+            "supply": 1,
+            "minerals": 50,
+            "gas": 0,
+            "time": 25
+        }
+    },
+    "Marauder": {
+        "name": "Marauder",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "BarracksOnTechLab"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 25,
+            "time": 30
+        }
+    },
+    "Reaper": {
+        "name": "Reaper",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "BarracksOnTechLab"
+        ],
+        "cost": {
+            "supply": 1,
+            "minerals": 50,
+            "gas": 50,
+            "time": 45
+        }
+    },
+    "Ghost": {
+        "name": "Ghost",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "GhostAcademy"
+        ],
+        "expends": [
+            "BarracksOnTechLab"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 200,
+            "gas": 100,
+            "time": 40
+        }
+    },
+    "Hellion": {
+        "name": "Hellion",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Factory",
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "FactoryOnTechLab"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 0,
+            "time": 30
+        }
+    },
+    "SiegeTank": {
+        "name": "Siege Tank",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "FactoryOnTechLab"
+        ],
+        "cost": {
+            "supply": 3,
+            "minerals": 150,
+            "gas": 125,
+            "time": 45
+        }
+    },
+    "Thor": {
+        "name": "Thor",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "Armory"
+        ],
+        "expends": [
+            "FactoryOnTechLab"
+        ],
+        "cost": {
+            "supply": 6,
+            "minerals": 300,
+            "gas": 200,
+            "time": 60
+        }
+    },
+    "Viking": {
+        "name": "Viking",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Starport",
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "StarportOnTechLab"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 150,
+            "gas": 75,
+            "time": 42
+        }
+    },
+    "Medivac": {
+        "name": "Medivac",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Starport",
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "StarportOnTechLab"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 100,
+            "time": 42
+        }
+    },
+    "Banshee": {
+        "name": "Banshee",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "StarportOnTechLab"
+        ],
+        "cost": {
+            "supply": 3,
+            "minerals": 150,
+            "gas": 100,
+            "time": 60
+        }
+    },
+    "Raven": {
+        "name": "Raven",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "StarportOnTechLab"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 200,
+            "time": 60
+        }
+    },
+    "Battlecruiser": {
+        "name": "Battlecruiser",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "FusionCore"
+        ],
+        "expends": [
+            "StarportOnTechLab"
+        ],
+        "cost": {
+            "supply": 6,
+            "minerals": 400,
+            "gas": 300,
+            "time": 90
+        }
+    },
+    "TacticalNuke": {
+        "name": "TacticalNuke",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "Factory"
+        ],
+        "expends": [
+            "GhostAcademy"
+        ],
+        "cost": {
+            "supply": 0,
+            "minerals": 100,
+            "gas": 100,
+            "time": 60
+        }
+    }
+}

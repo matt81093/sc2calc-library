@@ -1,0 +1,37 @@
+{
+    "CalldownMULE": {
+        "name": "Calldown: MULE",
+        "type": [
+            "Ability"
+        ],
+        "spellCaster": "OrbitalCommand",
+        "spellCooldown": 90,
+        "cost": {
+            "energy": 50
+        }
+    },
+    "CalldownExtraSupplies": {
+        "name": "Calldown: Extra Supplies",
+        "type": [
+            "Ability",
+            "Farm"
+        ],
+        "spellCaster": "OrbitalCommand",
+        "spellCooldown": 0,
+        "supplyCapacity": 8,
+        "cost": {
+            "energy": 50
+        }
+    },
+    "ScannerSweep": {
+        "name": "Scanner Sweep",
+        "type": [
+            "Ability"
+        ],
+        "spellCaster": "OrbitalCommand",
+        "spellCooldown": 12,
+        "cost": {
+            "energy": 50
+        }
+    }
+}

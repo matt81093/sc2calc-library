@@ -1,0 +1,453 @@
+{
+    "MeleeAttackslevel1": {
+        "name": "Melee Attacks Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 160
+        }
+    },
+    "MeleeAttackslevel2": {
+        "name": "Melee Attacks Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 190
+        }
+    },
+    "MeleeAttackslevel3": {
+        "name": "Melee Attacks Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 220
+        }
+    },
+    "MissileAttackslevel1": {
+        "name": "Missile Attacks Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 160
+        }
+    },
+    "MissileAttackslevel2": {
+        "name": "Missile Attacks Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 190
+        }
+    },
+    "MissileAttackslevel3": {
+        "name": "Missile Attacks Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 220
+        }
+    },
+    "FlyerAttackslevel1": {
+        "name": "Flyer Attacks Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Spire",
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 160
+        }
+    },
+    "FlyerAttackslevel2": {
+        "name": "Flyer Attacks Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "Spire",
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 175,
+            "gas": 175,
+            "time": 190
+        }
+    },
+    "FlyerAttackslevel3": {
+        "name": "Flyer Attacks Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "Spire",
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 250,
+            "gas": 250,
+            "time": 220
+        }
+    },
+    "GroundCarapacelevel1": {
+        "name": "Ground Carapace Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 160
+        }
+    },
+    "GroundCarapacelevel2": {
+        "name": "Ground Carapace Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 225,
+            "gas": 225,
+            "time": 190
+        }
+    },
+    "GroundCarapacelevel3": {
+        "name": "Ground Carapace Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "EvolutionChamber"
+        ],
+        "cost": {
+            "minerals": 300,
+            "gas": 300,
+            "time": 220
+        }
+    },
+    "FlyerCarapacelevel1": {
+        "name": "Flyer Carapace Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Spire",
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 160
+        }
+    },
+    "FlyerCarapacelevel2": {
+        "name": "Flyer Carapace Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "Spire",
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 225,
+            "gas": 225,
+            "time": 190
+        }
+    },
+    "FlyerCarapacelevel3": {
+        "name": "Flyer Carapace Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "Spire",
+            "GreaterSpire"
+        ],
+        "cost": {
+            "minerals": 300,
+            "gas": 300,
+            "time": 220
+        }
+    },
+    "CentrifugalHooks": {
+        "name": "Centrifugal Hooks",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "BanelingNest"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 110
+        }
+    },
+    "GlialReconstitution": {
+        "name": "Glial Reconstitution",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "RoachWarren"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 110
+        }
+    },
+    "MetabolicBoost": {
+        "name": "Metabolic Boost",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "SpawningPool"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 110
+        }
+    },
+    "PneumatizedCarapace": {
+        "name": "Pneumatized Carapace",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "Hatchery",
+            "Lair",
+            "Hive"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 60
+        }
+    },
+    "GroovedSpines": {
+        "name": "Grooved Spines",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "HydraliskDen"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 80
+        }
+    },
+    "NeuralParasite": {
+        "name": "Neural Parasite",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "InfestationPit"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 110
+        }
+    },
+    "PathogenGlands": {
+        "name": "Pathogen Glands",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "InfestationPit"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 80
+        }
+    },
+    "AdrenalGlands": {
+        "name": "Adrenal Glands",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Hive"
+        ],
+        "expends": [
+            "SpawningPool"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 130
+        }
+    },
+    "VentralSacs": {
+        "name": "Ventral Sacs",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "Hatchery",
+            "Lair",
+            "Hive"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 130
+        }
+    },
+    "TunnelingClaws": {
+        "name": "Tunneling Claws",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "RoachWarren"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 110
+        }
+    },
+    "ChitinousPlating": {
+        "name": "Chitinous Plating",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "UltraliskCavern"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 110
+        }
+    },
+    "Burrow": {
+        "name": "Burrow",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "Lair"
+        ],
+        "expends": [
+            "Hatchery",
+            "Lair",
+            "Hive"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 100
+        }
+    }
+}

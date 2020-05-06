@@ -1,0 +1,414 @@
+{
+    "WarpgateUpgrade": {
+        "name": "Warpgate",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 50,
+            "time": 160
+        }
+    },
+    "GroundWeaponslevel1": {
+        "name": "Ground Weapons Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 160
+        }
+    },
+    "GroundWeaponslevel2": {
+        "name": "Ground Weapons Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 190
+        }
+    },
+    "GroundWeaponslevel3": {
+        "name": "Ground Weapons Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 220
+        }
+    },
+    "GroundArmorlevel1": {
+        "name": "Ground Armor Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 160
+        }
+    },
+    "GroundArmorlevel2": {
+        "name": "Ground Armor Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 190
+        }
+    },
+    "GroundArmorlevel3": {
+        "name": "Ground Armor Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 220
+        }
+    },
+    "AirWeaponslevel1": {
+        "name": "Air Weapons Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 160
+        }
+    },
+    "AirWeaponslevel2": {
+        "name": "Air Weapons Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "FleetBeacon"
+        ],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 175,
+            "gas": 175,
+            "time": 190
+        }
+    },
+    "AirWeaponslevel3": {
+        "name": "Air Weapons Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "FleetBeacon"
+        ],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 250,
+            "gas": 250,
+            "time": 220
+        }
+    },
+    "AirArmorlevel1": {
+        "name": "Air Armor Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 160
+        }
+    },
+    "AirArmorlevel2": {
+        "name": "Air Armor Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "FleetBeacon"
+        ],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 225,
+            "gas": 225,
+            "time": 190
+        }
+    },
+    "AirArmorlevel3": {
+        "name": "Air Armor Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "FleetBeacon"
+        ],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 300,
+            "gas": 300,
+            "time": 220
+        }
+    },
+    "Shieldslevel1": {
+        "name": "Shields Level 1",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 160
+        }
+    },
+    "Shieldslevel2": {
+        "name": "Shields Level 2",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 225,
+            "gas": 225,
+            "time": 190
+        }
+    },
+    "Shieldslevel3": {
+        "name": "Shields Level 3",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [
+            "TwilightCouncil"
+        ],
+        "expends": [
+            "Forge"
+        ],
+        "cost": {
+            "minerals": 300,
+            "gas": 300,
+            "time": 220
+        }
+    },
+    "Charge": {
+        "name": "Charge",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "TwilightCouncil"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 140
+        }
+    },
+    "GraviticBoosters": {
+        "name": "Gravitic Boosters",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "RoboticsBay"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 80
+        }
+    },
+    "GraviticDrive": {
+        "name": "Gravitic Drive",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "RoboticsBay"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 80
+        }
+    },
+    "FluxVanes": {
+        "name": "Flux Vanes",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "FleetBeacon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 80
+        }
+    },
+    "ExtendedThermalLance": {
+        "name": "Extended Thermal Lance",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "RoboticsBay"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 140
+        }
+    },
+    "PsionicStorm": {
+        "name": "Psionic Storm",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "TemplarArchives"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 110
+        }
+    },
+    "Hallucination": {
+        "name": "Hallucination",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "CyberneticsCore"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 100,
+            "time": 110
+        }
+    },
+    "Blink": {
+        "name": "Blink",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "TwilightCouncil"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 110
+        }
+    },
+    "KhaydarinAmulet": {
+        "name": "Khaydarin Amulet",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "TemplarArchives"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 110
+        }
+    },
+    "GravitonCatapult": {
+        "name": "Graviton Catapult",
+        "type": [
+            "Upgrade"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "FleetBeacon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 80
+        }
+    }
+}

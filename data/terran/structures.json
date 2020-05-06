@@ -1,0 +1,311 @@
+{
+    "CommandCenter": {
+        "name": "Command Center",
+        "type": [
+            "Structure",
+            "Base",
+            "Farm",
+            "StartBase"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 11,
+        "cost": {
+            "minerals": 400,
+            "gas": 0,
+            "time": 100
+        }
+    },
+    "OrbitalCommand": {
+        "name": "Orbital Command",
+        "type": [
+            "Structure",
+            "Base",
+            "Spellcaster",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 11,
+        "energyStart": 50,
+        "energyMax": 100,
+        "cost": []
+    },
+    "PlanetaryFortress": {
+        "name": "Planetary Fortress",
+        "type": [
+            "Structure",
+            "Base",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 11,
+        "cost": []
+    },
+    "SupplyDepot": {
+        "name": "Supply Depot",
+        "type": [
+            "Structure",
+            "Farm"
+        ],
+        "prerequisites": [
+            "CommandCenter"
+        ],
+        "supplyCapacity": 8,
+        "cost": {
+            "minerals": 100,
+            "gas": 0,
+            "time": 30
+        }
+    },
+    "Refinery": {
+        "name": "Refinery",
+        "type": [
+            "Structure",
+            "Geyser"
+        ],
+        "prerequisites": [
+            "CommandCenter"
+        ],
+        "cost": {
+            "minerals": 75,
+            "gas": 0,
+            "time": 30
+        }
+    },
+    "Barracks": {
+        "name": "Barracks",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "CommandCenter",
+            "SupplyDepot"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 65
+        }
+    },
+    "EngineeringBay": {
+        "name": "Engineering Bay",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [],
+        "cost": {
+            "minerals": 150,
+            "gas": 100,
+            "time": 60
+        }
+    },
+    "Bunker": {
+        "name": "Bunker",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Barracks"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 0,
+            "time": 40
+        }
+    },
+    "MissileTurret": {
+        "name": "Missile Turret",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "EngineeringBay"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 0,
+            "time": 25
+        }
+    },
+    "SensorTower": {
+        "name": "Sensor Tower",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "EngineeringBay"
+        ],
+        "cost": {
+            "minerals": 125,
+            "gas": 100,
+            "time": 25
+        }
+    },
+    "Factory": {
+        "name": "Factory",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Barracks"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 100,
+            "time": 60
+        }
+    },
+    "GhostAcademy": {
+        "name": "Ghost Academy",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Barracks"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 50,
+            "time": 40
+        }
+    },
+    "Armory": {
+        "name": "Sensor Tower",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Factory"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 100,
+            "time": 65
+        }
+    },
+    "Starport": {
+        "name": "Starport",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Factory"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 100,
+            "time": 50
+        }
+    },
+    "FusionCore": {
+        "name": "Fusion Core",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Starport"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 50
+        }
+    },
+    "BarracksOnReactor": {
+        "name": "Barracks with attached Reactor",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "BarracksOnTechLab": {
+        "name": "Barracks with attached Tech Lab",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "FactoryOnReactor": {
+        "name": "Factory with attached Reactor",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "FactoryOnTechLab": {
+        "name": "Factory with attached Tech Lab",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "StarportOnReactor": {
+        "name": "Starport with attached Reactor",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "StarportOnTechLab": {
+        "name": "Starport with attached Tech Lab",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "Reactor": {
+        "name": "Reactor",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "ReactorOnBarracks": {
+        "name": "Reactor attached to Barracks",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "ReactorOnFactory": {
+        "name": "Reactor attached to Factory",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "ReactorOnStarport": {
+        "name": "Reactor attached to Starport",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "TechLab": {
+        "name": "Tech Lab",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "TechLabOnBarracks": {
+        "name": "Tech Lab attached to Barracks",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "TechLabOnFactory": {
+        "name": "Tech Lab attached to Factory",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    },
+    "TechLabOnStarport": {
+        "name": "Tech Lab attached to Starport",
+        "type": [
+            "Structure"
+        ],
+        "cost": []
+    }
+}

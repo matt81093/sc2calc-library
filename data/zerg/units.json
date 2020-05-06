@@ -1,0 +1,207 @@
+{
+    "larva": {
+        "name": "larva",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [],
+        "cost": []
+    },
+    "Drone": {
+        "name": "Drone",
+        "type": [
+            "Unit",
+            "Worker"
+        ],
+        "prerequisites": [],
+        "expends": [],
+        "cost": {
+            "supply": 1,
+            "minerals": 50,
+            "gas": 0,
+            "time": 17
+        }
+    },
+    "Overlord": {
+        "name": "Overlord",
+        "type": [
+            "Unit",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "expends": [],
+        "supplyCapacity": 8,
+        "cost": {
+            "supply": 0,
+            "minerals": 100,
+            "gas": 0,
+            "time": 25
+        }
+    },
+    "Queen": {
+        "name": "Queen",
+        "type": [
+            "Unit",
+            "Spellcaster"
+        ],
+        "prerequisites": [
+            "SpawningPool"
+        ],
+        "expends": [
+            "Hatchery",
+            "Lair",
+            "Hive"
+        ],
+        "energyStart": 25,
+        "energyMax": 200,
+        "cost": {
+            "supply": 2,
+            "minerals": 150,
+            "gas": 0,
+            "time": 50,
+            "larva": 0
+        }
+    },
+    "Zergling": {
+        "name": "Zergling",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "SpawningPool"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 1,
+            "minerals": 50,
+            "gas": 0,
+            "time": 24
+        }
+    },
+    "Baneling": {
+        "name": "Baneling",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [],
+        "cost": []
+    },
+    "Roach": {
+        "name": "Roach",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "RoachWarren"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 2,
+            "minerals": 75,
+            "gas": 25,
+            "time": 27
+        }
+    },
+    "Overseer": {
+        "name": "Overseer",
+        "type": [
+            "Unit",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "expends": [],
+        "supplyCapacity": 8,
+        "cost": []
+    },
+    "Hydralisk": {
+        "name": "Hydralisk",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "HydraliskDen"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 50,
+            "time": 33
+        }
+    },
+    "Mutalisk": {
+        "name": "Mutalisk",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "Spire"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 100,
+            "time": 33
+        }
+    },
+    "Corruptor": {
+        "name": "Corruptor",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "Spire"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 2,
+            "minerals": 150,
+            "gas": 100,
+            "time": 40
+        }
+    },
+    "BroodLord": {
+        "name": "Brood Lord",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [],
+        "cost": []
+    },
+    "Infestor": {
+        "name": "Infestor",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "InfestationPit"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 150,
+            "time": 50
+        }
+    },
+    "Ultralisk": {
+        "name": "Ultralisk",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "UltraliskCavern"
+        ],
+        "expends": [],
+        "cost": {
+            "supply": 6,
+            "minerals": 300,
+            "gas": 200,
+            "time": 70
+        }
+    }
+}

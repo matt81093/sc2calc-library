@@ -1,0 +1,5 @@
+<phpunit bootstrap="vendor/autoload.php">
+  <testsuite name="legacy-tests">
+	<directory>./tests/</directory>
+  </testsuite>
+</phpunit>

@@ -1,0 +1,797 @@
+{
+    "SalvageBunker": {
+        "name": "Salvage Bunker",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Bunker"
+        ],
+        "yields": [],
+        "cost": {
+            "minerals": -750,
+            "gas": 0,
+            "time": 3
+        }
+    },
+    "MorphToOrbitalCommand": {
+        "name": "Orbital Command",
+        "type": [
+            "Morph",
+            "Booster"
+        ],
+        "prerequisites": [
+            "Barracks"
+        ],
+        "expends": [
+            "CommandCenter"
+        ],
+        "yields": [
+            "OrbitalCommand"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 35
+        }
+    },
+    "MorphToPlanetaryFortress": {
+        "name": "Planetary Fortress",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "EngineeringBay"
+        ],
+        "expends": [
+            "CommandCenter"
+        ],
+        "yields": [
+            "PlanetaryFortress"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 50
+        }
+    },
+    "BuildReactorOnBarracks": {
+        "name": "Reactor on Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Barracks"
+        ],
+        "expends": [
+            "Barracks"
+        ],
+        "yields": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 50,
+            "time": 50
+        }
+    },
+    "BuildTechLabOnBarracks": {
+        "name": "Tech Lab on Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Barracks"
+        ],
+        "expends": [
+            "Barracks"
+        ],
+        "yields": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 25,
+            "time": 25
+        }
+    },
+    "BuildReactorOnFactory": {
+        "name": "Reactor on Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Factory"
+        ],
+        "expends": [
+            "Factory"
+        ],
+        "yields": [
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 50,
+            "time": 50
+        }
+    },
+    "BuildTechLabOnFactory": {
+        "name": "Tech Lab on Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Factory"
+        ],
+        "expends": [
+            "Factory"
+        ],
+        "yields": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 25,
+            "time": 25
+        }
+    },
+    "BuildReactorOnStarport": {
+        "name": "Reactor on Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Starport"
+        ],
+        "expends": [
+            "Starport"
+        ],
+        "yields": [
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 50,
+            "time": 50
+        }
+    },
+    "BuildTechLabOnStarport": {
+        "name": "Tech Lab on Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "Starport"
+        ],
+        "expends": [
+            "Starport"
+        ],
+        "yields": [
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "minerals": 50,
+            "gas": 25,
+            "time": 25
+        }
+    },
+    "SwapReactorOnBarracksToFactory": {
+        "name": "Swap Reactor on Barracks to Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "Factory"
+        ],
+        "expends": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "Factory"
+        ],
+        "yields": [
+            "Barracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnBarracksToStarport": {
+        "name": "Swap Reactor on Barracks to Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "Starport"
+        ],
+        "expends": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "Starport"
+        ],
+        "yields": [
+            "Barracks",
+            "FactoryOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnFactoryToBarracks": {
+        "name": "Swap Reactor on Factory to Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "Barracks"
+        ],
+        "expends": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "Barracks"
+        ],
+        "yields": [
+            "Factory",
+            "BarracksOnReactor",
+            "ReactorOnBarracks"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnFactoryToStarport": {
+        "name": "Swap Reactor on Factory to Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "Starport"
+        ],
+        "expends": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "Starport"
+        ],
+        "yields": [
+            "Factory",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnStarportToBarracks": {
+        "name": "Swap Reactor on Starport to Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "Barracks"
+        ],
+        "expends": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "Barracks"
+        ],
+        "yields": [
+            "Starport",
+            "BarracksOnReactor",
+            "ReactorOnBarracks"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnStarportToFactory": {
+        "name": "Swap Reactor on Starport to Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "Factory"
+        ],
+        "expends": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "Factory"
+        ],
+        "yields": [
+            "Starport",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnBarracksToFactory": {
+        "name": "Swap Tech Lab on Barracks to Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "Factory"
+        ],
+        "expends": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "Factory"
+        ],
+        "yields": [
+            "Barracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnBarracksToStarport": {
+        "name": "Swap Tech Lab on Barracks to Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "Starport"
+        ],
+        "expends": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "Starport"
+        ],
+        "yields": [
+            "Barracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnFactoryToBarracks": {
+        "name": "Swap Tech Lab on Factory to Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "Barracks"
+        ],
+        "expends": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "Barracks"
+        ],
+        "yields": [
+            "Factory",
+            "BarracksOnTechLab",
+            "TechLabOnBarracks"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnFactoryToStarport": {
+        "name": "Swap Tech Lab on Factory to Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "Starport"
+        ],
+        "expends": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "Starport"
+        ],
+        "yields": [
+            "Factory",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnStarportToBarracks": {
+        "name": "Swap Tech Lab on Starport to Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "Barracks"
+        ],
+        "expends": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "Barracks"
+        ],
+        "yields": [
+            "Starport",
+            "BarracksOnTechLab",
+            "TechLabOnBarracks"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnStarportToFactory": {
+        "name": "Swap Tech Lab on Starport to Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "Factory"
+        ],
+        "expends": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "Factory"
+        ],
+        "yields": [
+            "Starport",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnBarracksWithTechLabFactory": {
+        "name": "Swap Reactor on Barracks with Tech Lab on Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "expends": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "yields": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnBarracksWithTechLabStarport": {
+        "name": "Swap Reactor on Barracks with Tech Lab on Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "expends": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "yields": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnFactoryWithTechLabBarracks": {
+        "name": "Swap Reactor on Factory with Tech Lab on Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "expends": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "yields": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnFactoryWithTechLabStarport": {
+        "name": "Swap Reactor on Factory with Tech Lab on Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "expends": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "yields": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnStarportWithTechLabBarracks": {
+        "name": "Swap Reactor on Starport with Tech Lab on Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "expends": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "yields": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapReactorOnStarportWithTechLabFactory": {
+        "name": "Swap Reactor on Starport with Tech Lab on Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "expends": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "yields": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnBarracksWithReactorFactory": {
+        "name": "Swap Tech Lab on Barracks with Reactor on Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "expends": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "yields": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnBarracksWithReactorStarport": {
+        "name": "Swap Tech Lab on Barracks with Reactor on Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "expends": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "yields": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnFactoryWithReactorBarracks": {
+        "name": "Swap Tech Lab on Factory with Reactor on Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "expends": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "yields": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnFactoryWithReactorStarport": {
+        "name": "Swap Tech Lab on Factory with Reactor on Starport",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "expends": [
+            "StarportOnReactor",
+            "ReactorOnStarport",
+            "FactoryOnTechLab",
+            "TechLabOnFactory"
+        ],
+        "yields": [
+            "StarportOnTechLab",
+            "TechLabOnStarport",
+            "FactoryOnReactor",
+            "ReactorOnFactory"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnStarportWithReactorBarracks": {
+        "name": "Swap Tech Lab on Starport with Reactor on Barracks",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "expends": [
+            "BarracksOnReactor",
+            "ReactorOnBarracks",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "yields": [
+            "BarracksOnTechLab",
+            "TechLabOnBarracks",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    },
+    "SwapTechLabOnStarportWithReactorFactory": {
+        "name": "Swap Tech Lab on Starport with Reactor on Factory",
+        "type": [
+            "Morph"
+        ],
+        "prerequisites": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "expends": [
+            "FactoryOnReactor",
+            "ReactorOnFactory",
+            "StarportOnTechLab",
+            "TechLabOnStarport"
+        ],
+        "yields": [
+            "FactoryOnTechLab",
+            "TechLabOnFactory",
+            "StarportOnReactor",
+            "ReactorOnStarport"
+        ],
+        "cost": {
+            "time": 10
+        }
+    }
+}

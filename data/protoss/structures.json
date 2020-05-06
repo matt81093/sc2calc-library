@@ -1,0 +1,221 @@
+{
+    "Nexus": {
+        "name": "Nexus",
+        "type": [
+            "Structure",
+            "Base",
+            "Spellcaster",
+            "Booster",
+            "Farm",
+            "StartBase"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 10,
+        "energyStart": 0,
+        "energyMax": 100,
+        "cost": {
+            "minerals": 400,
+            "gas": 0,
+            "time": 100
+        }
+    },
+    "Pylon": {
+        "name": "Pylon",
+        "type": [
+            "Structure",
+            "Farm"
+        ],
+        "prerequisites": [],
+        "supplyCapacity": 8,
+        "cost": {
+            "minerals": 100,
+            "gas": 0,
+            "time": 25
+        }
+    },
+    "Assimilator": {
+        "name": "Assimilator",
+        "type": [
+            "Structure",
+            "Geyser"
+        ],
+        "prerequisites": [],
+        "cost": {
+            "minerals": 75,
+            "gas": 0,
+            "time": 30
+        }
+    },
+    "Gateway": {
+        "name": "Gateway",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Nexus",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 65
+        }
+    },
+    "Warpgate": {
+        "name": "Warpgate Gateway",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [],
+        "cost": {
+            "time": 30
+        }
+    },
+    "Forge": {
+        "name": "Forge",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Nexus",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 45
+        }
+    },
+    "PhotonCannon": {
+        "name": "Photon Cannon",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Forge",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 40
+        }
+    },
+    "CyberneticsCore": {
+        "name": "Cybernetics Core",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Gateway",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 0,
+            "time": 50
+        }
+    },
+    "TwilightCouncil": {
+        "name": "Twilight Council",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [],
+        "cost": {
+            "minerals": 150,
+            "gas": 100,
+            "time": 50
+        }
+    },
+    "RoboticsFacility": {
+        "name": "Robotics Facility",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "CyberneticsCore",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 100,
+            "time": 65
+        }
+    },
+    "Stargate": {
+        "name": "Stargate",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "CyberneticsCore",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 150,
+            "time": 60
+        }
+    },
+    "TemplarArchives": {
+        "name": "Templar Archives",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "TwilightCouncil",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 150,
+            "gas": 200,
+            "time": 50
+        }
+    },
+    "DarkShrine": {
+        "name": "Dark Shrine",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "TwilightCouncil",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 100,
+            "gas": 200,
+            "time": 100
+        }
+    },
+    "RoboticsBay": {
+        "name": "Robotics Bay",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "RoboticsFacility",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 200,
+            "gas": 200,
+            "time": 65
+        }
+    },
+    "FleetBeacon": {
+        "name": "Fleet Beacon",
+        "type": [
+            "Structure"
+        ],
+        "prerequisites": [
+            "Stargate",
+            "Pylon"
+        ],
+        "cost": {
+            "minerals": 300,
+            "gas": 200,
+            "time": 60
+        }
+    }
+}

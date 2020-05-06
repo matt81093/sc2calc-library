@@ -1,0 +1,15 @@
+9 Pylon
+10 Probe*
+12 Gateway and scout
+12 Probe*
+14 Assimilator, then put 3 probes on gas (2 seconds)
+16 Pylon
+18 Cybernetics Core
+19 Zealot
+23 Pylon
+24 Stalker
+26 Warpgate**
+27 Gateway
+28 Sentry
+30 Gateway [2], then Transform to Warpgate [4]
+31 Pylon

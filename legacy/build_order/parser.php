@@ -86,9 +86,9 @@ class Parser {
 	 */
 	public function read($lineNumber, $line) {
 		global $ScoutingWorker, $Drone;
-		
+
 		$line = str_replace(",", "", $line);
-		
+
 		$jobStack = array();
 
 		// split line into commands
@@ -96,7 +96,7 @@ class Parser {
 		for($i = 0; $i < count($commands); $i += 2) {
 			$command = trim($commands[$i]);
 			$operator = $i == 0 ? null : trim($commands[$i - 1]);
-			
+
 			// wipe slate
 			unset($job);
 			unset($product);
@@ -178,7 +178,7 @@ class Parser {
 					$delay = 0;
 				}
 				$job = new ScoutJob($delay);
-				
+
 			// option
 			} elseif(preg_match("/^\s*#(?P<name>[\w\s]+)=(?P<value>[a-zA-Z0-9\s]+)$/i", $command, $terms)) {
 				$this->options[trim($terms["name"])] = trim($terms["value"]);
@@ -236,7 +236,7 @@ class Parser {
 				$product = Product::byName(trim($terms["product"]));
 				if(empty($product)) {
 					throw_error("Line <i>". ($lineNumber + 1) ."</i> : Unknown object <i>". $terms["product"] ."</i>",
-						"For a complete list of units, structures, upgrades, morphs and abilities, please refer to <a href=\"list.php\" target=\"_blank\">this list</a>. If you are trying to do something other than building, please check the <i>single line examples</i> for the syntax of the other commands. The syntax is not case-sensitive, but it is very specific in the spelling.");
+                        ">this list</a>. If you are trying to do something other than building, please check the <i>single line examples</i> for the syntax of the other commands. The syntax is not case-sensitive, but it is very specific in the spelling.");
 				} else {
 					$job = new CancelJob($product);
 				}
@@ -306,7 +306,7 @@ class Parser {
 			} elseif(preg_match("/^(?P<proxy>proxy\s+)?". RegexProduct() ."(?P<priority>\s*!)?\s*". RegexInitiate ."?$/i", $command, $terms)) {
 				// create job
 				$product = Product::byName(trim($terms["product"]));
-				if(empty($product)) {	
+				if(empty($product)) {
 					throw_error("Line <i>". ($lineNumber + 1) ."</i> : Unknown command <i>". $command ."</i>",
 						"For a complete list of units, structures, upgrades, morphs and abilities, please refer to <a href=\"list.php\" target=\"_blank\">this list</a>. If you are trying to do something other than building, please check the <i>single line examples</i> for the syntax of the other commands. The syntax is not case-sensitive, but it is very specific in the spelling.");
 				} else {

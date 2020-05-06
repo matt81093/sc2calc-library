@@ -1,0 +1,265 @@
+{
+    "Probe": {
+        "name": "Probe",
+        "type": [
+            "Unit",
+            "Worker"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Nexus"
+        ],
+        "cost": {
+            "supply": 1,
+            "minerals": 50,
+            "gas": 0,
+            "time": 17
+        }
+    },
+    "Zealot": {
+        "name": "Zealot",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Gateway",
+            "Warpgate"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 100,
+            "gas": 0,
+            "time": 38
+        }
+    },
+    "Sentry": {
+        "name": "Sentry",
+        "type": [
+            "Unit",
+            "Spellcaster"
+        ],
+        "prerequisites": [
+            "CyberneticsCore"
+        ],
+        "expends": [
+            "Gateway",
+            "Warpgate"
+        ],
+        "energyStart": 50,
+        "energyMax": 200,
+        "cost": {
+            "supply": 2,
+            "minerals": 50,
+            "gas": 100,
+            "time": 42
+        }
+    },
+    "Stalker": {
+        "name": "Stalker",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "CyberneticsCore"
+        ],
+        "expends": [
+            "Gateway",
+            "Warpgate"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 125,
+            "gas": 50,
+            "time": 42
+        }
+    },
+    "HighTemplar": {
+        "name": "High Templar",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "TemplarArchives"
+        ],
+        "expends": [
+            "Gateway",
+            "Warpgate"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 50,
+            "gas": 150,
+            "time": 55
+        }
+    },
+    "DarkTemplar": {
+        "name": "Dark Templar",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "DarkShrine"
+        ],
+        "expends": [
+            "Gateway",
+            "Warpgate"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 125,
+            "gas": 125,
+            "time": 55
+        }
+    },
+    "Observer": {
+        "name": "Observer",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "RoboticsFacility"
+        ],
+        "cost": {
+            "supply": 1,
+            "minerals": 25,
+            "gas": 75,
+            "time": 40
+        }
+    },
+    "Immortal": {
+        "name": "Immortal",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "RoboticsFacility"
+        ],
+        "cost": {
+            "supply": 4,
+            "minerals": 250,
+            "gas": 100,
+            "time": 50
+        }
+    },
+    "WarpPrism": {
+        "name": "Warp Prism",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "RoboticsFacility"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 200,
+            "gas": 0,
+            "time": 50
+        }
+    },
+    "Colossus": {
+        "name": "Colossus",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "RoboticsBay"
+        ],
+        "expends": [
+            "RoboticsFacility"
+        ],
+        "cost": {
+            "supply": 6,
+            "minerals": 300,
+            "gas": 200,
+            "time": 75
+        }
+    },
+    "Phoenix": {
+        "name": "Phoenix",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Stargate"
+        ],
+        "cost": {
+            "supply": 2,
+            "minerals": 150,
+            "gas": 100,
+            "time": 35
+        }
+    },
+    "VoidRay": {
+        "name": "Void Ray",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Stargate"
+        ],
+        "cost": {
+            "supply": 3,
+            "minerals": 250,
+            "gas": 150,
+            "time": 60
+        }
+    },
+    "Carrier": {
+        "name": "Carrier",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "FleetBeacon"
+        ],
+        "expends": [
+            "Stargate"
+        ],
+        "cost": {
+            "supply": 6,
+            "minerals": 350,
+            "gas": 250,
+            "time": 120
+        }
+    },
+    "Interceptor": {
+        "name": "Interceptor",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [],
+        "expends": [
+            "Carrier"
+        ],
+        "cost": {
+            "supply": 0,
+            "minerals": 25,
+            "gas": 0,
+            "time": 8
+        }
+    },
+    "Mothership": {
+        "name": "Mothership",
+        "type": [
+            "Unit"
+        ],
+        "prerequisites": [
+            "FleetBeacon"
+        ],
+        "expends": [
+            "Nexus"
+        ],
+        "cost": {
+            "supply": 8,
+            "minerals": 400,
+            "gas": 400,
+            "time": 160
+        }
+    }
+}
