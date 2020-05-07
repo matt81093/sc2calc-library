@@ -9,9 +9,10 @@
 
 namespace holonet\sc2calc;
 
-use holonet\sc2calc\format\Parser;
 use holonet\sc2calc\timeline\Timeline;
+use holonet\sc2calc\format\BuildFormat;
 use holonet\sc2calc\timeline\Scheduler;
+use holonet\sc2calc\format\StringFormat;
 use holonet\sc2calc\sets\ProductsManager;
 use Symfony\Component\Stopwatch\Stopwatch;
 
@@ -38,9 +39,18 @@ class Sc2Calc {
 	 * @return Sc2Build instance representing the parsed build
 	 */
 	public function fromBuildOrderString(string $buildOrder): Sc2Build {
+		return $this->fromFormat($buildOrder, StringFormat::name());
+	}
+
+	/**
+	 * @param string $buildOrder Build order string in the given format
+	 * @param string $format The format defintion to use to try and parse the build
+	 * @return Sc2Build instance representing the parsed build
+	 */
+	public function fromFormat(string $buildOrder, string $format): Sc2Build {
 		$stopwatch = new Stopwatch();
 
-		$parser = new Parser($stopwatch, $this->productManager);
+		$parser = BuildFormat::parser($format, $stopwatch, $this->productManager);
 		$parser->parse($buildOrder);
 
 		$timeline = $parser->createTimeline();

@@ -9,9 +9,9 @@
 
 namespace holonet\sc2calc\init;
 
-use holonet\sc2calc\format\Parser;
 use holonet\sc2calc\logic\Spellcaster;
 use holonet\sc2calc\timeline\Timeline;
+use holonet\sc2calc\format\parser\Parser;
 
 /**
  * ProtossInitialiser to be used for a normal Protoss 1v1 ladder game start.

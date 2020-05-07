@@ -11,10 +11,10 @@ namespace holonet\sc2calc\init;
 
 use holonet\sc2calc\logic\Farm;
 use holonet\sc2calc\job\BuildJob;
-use holonet\sc2calc\format\Parser;
 use holonet\sc2calc\logic\IncomeSlot;
 use holonet\sc2calc\sets\IncomeSlots;
 use holonet\sc2calc\timeline\Timeline;
+use holonet\sc2calc\format\parser\Parser;
 use holonet\sc2calc\sets\ProductsManager;
 use holonet\sc2calc\logic\ProductionQueue;
 
