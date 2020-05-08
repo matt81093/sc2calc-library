@@ -20,7 +20,7 @@
 		"php": ">=7.3",
 		"ext-json": "*",
 		"myclabs/php-enum": "^1.7",
-		"jc21/clitable": "^1.2",
+		"holonet/cli": "~1.2.0",
 		"symfony/stopwatch": "^5.0"
 	},
 	"require-dev": {
@@ -29,6 +29,9 @@
 		"symfony/var-dumper": "^5.0",
 		"phpunit/phpunit": "^8.4.1"
 	},
+	"bin": [
+		"bin/sc2calc"
+	],
 	"scripts": {
 		"fix": [
 			"@php -d memory_limit=-1 vendor/friendsofphp/php-cs-fixer/php-cs-fixer fix --verbose --ansi"

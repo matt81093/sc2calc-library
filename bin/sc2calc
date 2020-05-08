@@ -1,0 +1,19 @@
+#!/usr/bin/env php
+<?php
+/**
+ * This file is part of the library rewrite based on sc2calc.org
+ * (c) Matthias Lantsch.
+ *
+ * @license http://www.wtfpl.net/ Do what the fuck you want Public License
+ * @author  Matthias Lantsch <matthias.lantsch@bluewin.ch>
+ */
+
+//check if we are installed as a vendor binary or not
+if(file_exists(dirname(__DIR__,3)."/autoload.php")) {
+  require_once dirname(__DIR__,3)."/autoload.php";
+} else {
+    require_once dirname(__DIR__)."/vendor/autoload.php";
+}
+
+$cliapp = \holonet\sc2calc\cli\Sc2CalcApplication::runFromTerminal();
+$cliapp->run();

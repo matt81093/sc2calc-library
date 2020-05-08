@@ -115,6 +115,18 @@ class Hatchery {
 	}
 
 	/**
+	 * Export all larva timings into a string.
+	 */
+	public function getLarvaTimings(): string {
+		$larvaTimings = array();
+		foreach ($this->_generated as $generated) {
+			$larvaTimings[] = Utils::simple_time($generated);
+		}
+
+		return implode(' > ', $larvaTimings);
+	}
+
+	/**
 	 * @return float time when next larva is generated, INF if there are 3 or more larvae available
 	 */
 	public function nextGenerated(): float {

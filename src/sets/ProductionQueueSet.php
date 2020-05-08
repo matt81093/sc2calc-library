@@ -9,6 +9,7 @@
 
 namespace holonet\sc2calc\sets;
 
+use jc21\CliTable;
 use LogicException;
 use holonet\sc2calc\Utils;
 use holonet\sc2calc\Sc2Calc;
@@ -44,28 +45,16 @@ class ProductionQueueSet {
 	}
 
 	public function __toString(): string {
-		$headers = array('Structure', 'Created', 'Destroyed', 'Busy time', 'Busy percentage');
-		$separatorLine = '+'.str_repeat('-----+', count($headers));
-		$table = array($separatorLine);
-		$table[] = sprintf('|%s|', implode('|', $headers));
-		$table[] = $separatorLine;
+		$cliTable = new CliTable();
+		$cliTable->addField('Structure', 'structure');
+		$cliTable->addField('Created', 'created');
+		$cliTable->addField('Destroyed', 'destroyed');
+		$cliTable->addField('Busy time', 'busy_time');
+		$cliTable->addField('Busy percentage', 'busy_percentage');
+		$cliTable->injectData($this->toArray());
 
-		foreach ($this->_queues as $queue) {
-			$existed = (isset($queue->destroyed) ? $queue->destroyed : $this->timeEnds) - $queue->created;
-			if ($queue->busyTime !== 0 && $existed !== 0) {
-				$table[] = sprintf("\t|%5s|%5s|%5s|%5s|%5s|\n",
-					$queue->structure->name, Utils::simple_time($queue->created),
-					(isset($queue->destroyed) ? Utils::simple_time($queue->destroyed) : ''),
-					Utils::simple_time($queue->busyTime),
-					number_format(100 * $queue->busyTime / $existed)
-				);
-			}
-		}
-
-		return implode("\n", $table);
+		return $cliTable->get();
 	}
-
-	/// public methods
 
 	/**
 	 * @param ProductionQueue $queue Queue object to be added to the list
@@ -178,6 +167,27 @@ class ProductionQueueSet {
 		}
 
 		return $queues;
+	}
+
+	/**
+	 * Export the queues and their usage times into a serialisable array.
+	 */
+	public function toArray(): array {
+		$ret = array();
+		foreach ($this->_queues as $queue) {
+			$existed = (isset($queue->destroyed) ? $queue->destroyed : $this->timeEnds) - $queue->created;
+			if ($queue->busyTime !== 0 && $existed !== 0) {
+				$ret[] = array(
+					'structure' => $queue->structure->name,
+					'created' => Utils::simple_time($queue->created),
+					'destroyed' => (isset($queue->destroyed) ? Utils::simple_time($queue->destroyed) : ''),
+					'busy_time' => Utils::simple_time($queue->busyTime),
+					'busy_percentage' => number_format(100 * $queue->busyTime / $existed).'%'
+				);
+			}
+		}
+
+		return $ret;
 	}
 
 	/**

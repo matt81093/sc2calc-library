@@ -9,6 +9,7 @@
 
 namespace holonet\sc2calc\sets;
 
+use jc21\CliTable;
 use LogicException;
 use holonet\sc2calc\Utils;
 use holonet\sc2calc\Sc2Calc;
@@ -43,6 +44,16 @@ class HatcherySet {
 		}
 		$this->_hatcheries = $hatcheries;
 		$this->_isClone = true;
+	}
+
+	public function __toString(): string {
+		$cliTable = new CliTable();
+		$cliTable->addField('#', 'order');
+		$cliTable->addField('Created', 'created');
+		$cliTable->addField('Larvae generated at', 'larva_timings');
+		$cliTable->injectData($this->toArray());
+
+		return $cliTable->get();
 	}
 
 	/**
@@ -138,6 +149,22 @@ class HatcherySet {
 		}
 
 		return $larvae;
+	}
+
+	/**
+	 * Export the income slots into a serialisable array.
+	 */
+	public function toArray(): array {
+		$ret = array();
+		foreach ($this->_hatcheries as $hatchery) {
+			$ret[] = array(
+				'order' => $hatchery->order,
+				'created' => Utils::simple_time($hatchery->created),
+				'larva_timings' => $hatchery->getLarvaTimings(),
+			);
+		}
+
+		return $ret;
 	}
 
 	/**

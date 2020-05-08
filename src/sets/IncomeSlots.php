@@ -11,6 +11,7 @@ namespace holonet\sc2calc\sets;
 
 use Countable;
 use ArrayAccess;
+use jc21\CliTable;
 use LogicException;
 use holonet\sc2calc\Utils;
 use holonet\sc2calc\Sc2Calc;
@@ -74,7 +75,20 @@ class IncomeSlots implements ArrayAccess, Countable {
 		$this->_slots = $slots;
 	}
 
-	/// Countable implementation
+	public function __toString(): string {
+		$cliTable = new CliTable();
+		$cliTable->addField('#', 'order');
+		$cliTable->addField('Started', 'started');
+		$cliTable->addField('Ended', 'ended');
+		$cliTable->addField('Minerals per second', 'minerals_per_second');
+		$cliTable->addField('Gas per second', 'gas_per_second');
+		$cliTable->addField('Workers on mineral', 'mineral_workers');
+		$cliTable->addField('Workers on gas', 'gas_workers');
+		$cliTable->injectData($this->toArray());
+
+		return $cliTable->get();
+	}
+
 	public function count() {
 		return count($this->_slots);
 	}
@@ -96,7 +110,6 @@ class IncomeSlots implements ArrayAccess, Countable {
 		}
 	}
 
-	/// ArrayAccess implementation
 	public function offsetExists($key) {
 		return isset($this->_slots[$key]);
 	}
@@ -190,6 +203,35 @@ class IncomeSlots implements ArrayAccess, Countable {
 		}
 
 		return array($gasSurplus, $mineralSurplus);
+	}
+
+	/**
+	 * Export the income slots into a serialisable array.
+	 */
+	public function toArray(): array {
+		$ret = array(0 => array(
+			'order' => 0,
+			'started' => '0:00',
+			'ended' => '0:00',
+			'minerals_per_second' => 50,
+			'gas_per_second' => 0,
+			'mineral_workers' => 'n/a',
+			'gas_workers' => 'n/a'
+		));
+		$order = 0;
+		foreach ($this->_slots as $incomeSlot) {
+			$ret[++$order] = array(
+				'order' => $order,
+				'started' => Utils::simple_time($incomeSlot->startTime),
+				'ended' => Utils::simple_time($incomeSlot->endTime),
+				'minerals_per_second' => $incomeSlot->mineralRate(),
+				'gas_per_second' => $incomeSlot->gasRate(),
+				'mineral_workers' => implode(', ', $incomeSlot->mineralMiners).''.($incomeSlot->MULEs ? (' +'.$incomeSlot->MULEs.' mules') : ''),
+				'gas_workers' => implode(', ', $incomeSlot->gasMiners)
+			);
+		}
+
+		return $ret;
 	}
 
 	/**

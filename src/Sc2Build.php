@@ -46,5 +46,7 @@ class Sc2Build {
 		$this->stopwatch = $stopwatch;
 		$this->timeline = $timeline;
 		$this->endTime = $endTime;
+		$this->race = $timeline->race;
+		$timeline->queues->timeEnds = $endTime;
 	}
 }

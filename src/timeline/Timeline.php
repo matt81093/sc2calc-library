@@ -41,6 +41,11 @@ class Timeline {
 	public const CHRONO_BOOST_RATE = 1.5;
 
 	/**
+	 * @var Event[] $_events list of events, representing handled jobs and checkpoints
+	 */
+	public $_events = array();
+
+	/**
 	 * @var Checkpoint[] $checkpoints List of unhandled checkpoints
 	 */
 	public $checkpoints = array();
@@ -94,11 +99,6 @@ class Timeline {
 	 * @var int $supplyCount current supply count
 	 */
 	public $supplyCount = 0;
-
-	/**
-	 * @var Event[] $_events list of events, representing handled jobs and checkpoints
-	 */
-	private $_events = array();
 
 	/**
 	 * @var ProductsManager $productManager Collection holding all the parsed product objects

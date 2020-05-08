@@ -50,11 +50,6 @@ class IncomeSlot {
 	public $MULEs = 0;
 
 	/**
-	 * @var int $order Number that indicates the chronological order of the slots
-	 */
-	public $order;
-
-	/**
 	 * @var float $startTime Time when this slot starts
 	 */
 	public $startTime;
